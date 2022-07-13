@@ -1,6 +1,7 @@
 package com.mysite.sbb.question.controller;
 
-import com.mysite.sbb.article.domain.Article;
+import com.mysite.sbb.question.dao.QuestRepository;
+import com.mysite.sbb.question.domain.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +13,11 @@ import java.util.List;
 @Controller
 public class QuestController {
     @Autowired
-    private QuestController questController;
+    private QuestRepository questRepository;
 
     @RequestMapping("/list")
     @ResponseBody
-    public List<Article> showList(String title, String body) {
-
+    public List<Question> showList() {
+        return questRepository.findAll();
     }
 }
