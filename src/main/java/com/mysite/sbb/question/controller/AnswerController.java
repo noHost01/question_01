@@ -14,7 +14,7 @@ import java.util.List;
 public class AnswerController {
 
     @Autowired
-    private AnswerRepository answerRepository;
+    AnswerRepository answerRepository;
 
     @RequestMapping("/list")
     @ResponseBody
