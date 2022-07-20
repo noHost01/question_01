@@ -39,7 +39,7 @@ public class QuestController {
         return "question_detail";
     }
     @GetMapping("/create")
-    public String showCreate(QuestionForm questionForm) {
+    public String questionCreate(QuestionForm questionForm) {
         return "question_form";
     }
 
